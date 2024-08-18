@@ -1,0 +1,57 @@
+2024-08-18 18:51:46.885996+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2024-08-18 18:51:46.905997+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references user [42001-224]
+2024-08-18 18:52:36.263112+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+select * from Users [42102-224]
+2024-08-18 18:52:40.542461+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "Users" not found; SQL statement:
+select * from "Users" [42102-224]
+2024-08-18 18:52:52.488653+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from [*]'Users'"; expected "identifier"; SQL statement:
+select * from 'Users' [42001-224]
+2024-08-18 18:52:58.371316+02:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from [*]User"; expected "identifier"; SQL statement:
+select * from User [42001-224]
+2024-08-18 18:57:11.698833+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2024-08-18 18:57:11.711834+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references user [42001-224]
+2024-08-18 18:58:23.857171+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2024-08-18 18:58:23.870171+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references user [42001-224]
+2024-08-18 19:00:17.420857+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2024-08-18 19:00:17.437861+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references user [42001-224]
+2024-08-18 19:00:57.073032+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from [*]USER"; expected "identifier"; SQL statement:
+select * from USER [42001-224]
+2024-08-18 19:02:37.143690+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2024-08-18 19:03:08.647049+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2024-08-18 19:03:08.661256+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references user [42001-224]
+2024-08-18 19:07:29.968996+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, email varchar(255), password varchar(255), username varchar(255), primary key (id)) [42001-224]
+2024-08-18 19:07:29.999002+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references [*]user"; expected "identifier"; SQL statement:
+alter table if exists owned_item add constraint FKmvfc3c22id8m1us1ftp9svlqu foreign key (user_id) references user [42001-224]
+2024-08-18 19:07:44.193563+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USERS OWNED_ITEM [*]USERS"; SQL statement:
+SELECT * FROM USERS OWNED_ITEM USERS [42000-224]

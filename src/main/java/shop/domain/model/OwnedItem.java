@@ -21,11 +21,4 @@ public class OwnedItem {
     private User user;
 
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
 }
