@@ -18,7 +18,7 @@ public class OwnedItem {
     private String description;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private User owner;
+    private User user;
 
 
     public void setId(Long id) {
