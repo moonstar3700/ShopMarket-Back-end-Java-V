@@ -39,6 +39,16 @@ public class UserController {
         userService.adduser(user);
         return this.getAll();}
 
+    @PutMapping("/update/{id}")
+    public User updateUser(@PathVariable long id, @Valid @RequestBody User user){
+        if (!userService.getUserById(id)) throw new ServiceException("update", "user.not.exist");
+        try {
+            return userService.updateUser(user, id);
+        } catch (ServiceException ex){
+            throw new ServiceException("update", ex.getMessage());
+        }
+    }
+
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler({MethodArgumentNotValidException.class, ServiceException.class, ResponseStatusException.class})
