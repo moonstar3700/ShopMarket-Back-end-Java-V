@@ -15,4 +15,16 @@ public class UserService {
     public UserService() {};
 
     public List<User> getAllUsers() {return userRepository.findAll();}
+
+    public User adduser(User user) {
+        if (userRepository.existsByEmail(user.getEmail())){
+            throw new ServiceException("save", "user.username.exists");
+        }
+        if (userRepository.existsByUsername(user.getUsername())){
+            throw new ServiceException("save", "user.email.exists");
+        }
+        return userRepository.save(user);
+    }
+
+
 }
