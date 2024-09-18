@@ -31,6 +31,7 @@ public class UserService {
 
 
     public User updateUser(User user, long id) {
+        /** check whether the username and email already exist on another profile (id)*/
         if (userRepository.existsByUsernameAndExcludeId(user.getUsername(), user.getId())) throw new ServiceException("update", "user.username.exists");
         if (userRepository.existsByEmailAndExcludeId(user.getEmail(), user.getId())) throw new ServiceException("update", "user.email.exists");
         user.setId(id);
@@ -39,5 +40,11 @@ public class UserService {
 
     public boolean getUserById(long id) {
         return userRepository.existsById(id);
+    }
+
+    public User deleteById(long id) {
+        User user = userRepository.findById(id).orElseThrow(() -> new ServiceException("delete", "user.not.exists"));
+        userRepository.delete(user);
+        return user;
     }
 }
