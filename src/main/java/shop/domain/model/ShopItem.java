@@ -9,6 +9,8 @@ import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 
+/** Lombok use */
+
 @Entity @Getter @Setter
 public class ShopItem {
 

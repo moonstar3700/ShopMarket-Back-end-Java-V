@@ -29,7 +29,6 @@ public class UserService {
         return userRepository.save(user);
     }
 
-
     public User updateUser(User user, long id) {
         /** check whether the username and email already exist on another profile (id)*/
         if (userRepository.existsByUsernameAndExcludeId(user.getUsername(), user.getId())) throw new ServiceException("update", "user.username.exists");
