@@ -7,8 +7,11 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import shop.domain.model.ShopItem;
 import shop.domain.model.User;
 import shop.domain.service.ServiceException;
+import shop.domain.service.ShopItemRepository;
+import shop.domain.service.ShopItemService;
 import shop.domain.service.UserService;
 
 import javax.validation.Valid;
@@ -17,46 +20,42 @@ import java.util.Locale;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/shop")
+public class ShopItemController {
 
     @Autowired
-    private UserService userService;
+    private ShopItemService shopItemService;
 
     @Autowired
     MessageSource messageSource;
 
-    @GetMapping("/home")
-    public String home(){
-        return "user controller";
-    }
-
     @GetMapping("/overview")
-    public Iterable<User> getAll() { return userService.getAllUsers(); }
+    public Iterable<ShopItem> getAll() { return shopItemService.getAllShopItems(); }
 
     @PutMapping("/add")
-    public Iterable<User> addUser(@Valid @RequestBody User user) {
-        userService.adduser(user);
+    public Iterable<ShopItem> addShopItem(@Valid @RequestBody ShopItem shopItem) {
+        shopItemService.addShopItem(shopItem);
         return this.getAll();}
 
     @PutMapping("/update/{id}")
-    public User updateUser(@PathVariable long id, @Valid @RequestBody User user){
+    public ShopItem updateShopItem(@PathVariable long id, @Valid @RequestBody ShopItem shopItem){
         try {
-            if (!userService.getUserById(id)) throw new ServiceException("update", "user.not.exists");
-            return userService.updateUser(user, id);
+            shopItemService.checkShopItemExistence(id);
+            //if (!shopItemService.getUserById(id)) throw new ServiceException("update", "shopitem.not.exist");
+            return shopItemService.updateShopItem(shopItem, id);
         } catch (ServiceException ex){
             throw new ServiceException("update", ex.getMessage());
         }
     }
 
     @DeleteMapping("/delete/{id}")
-    public User deleteUser(@PathVariable long id){
-        try {
-            return userService.deleteById(id);
+    public ShopItem deleteShopItem(@PathVariable long id){
+        //try {
+            return shopItemService.deleteById(id);
 
-        } catch (ServiceException ex){
+        /*} catch (ServiceException ex){
             throw new ServiceException("delete", ex.getMessage());
-        }
+        }*/
     }
 
 

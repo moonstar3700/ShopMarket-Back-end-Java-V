@@ -18,12 +18,12 @@ public class ShopItemService {
 
     public ShopItem addShopItem(ShopItem shopItem){
         if (shopItemRepository.existsByName(shopItem.getName())){
-            throw new ServiceException("save", "shopItem.name.exists");
+            throw new ServiceException("save", "shopitem.name.exists");
         }
         return shopItemRepository.save(shopItem);
     }
 
-    public  boolean getUserById(long id){return shopItemRepository.existsById(id);}
+    public boolean getShopItemById(long id){return shopItemRepository.existsById(id);}
 
     public ShopItem updateShopItem(ShopItem shopItem, long id){
         if (shopItemRepository.existsByNameAndExcludeId(shopItem.getName(), shopItem.getId())){
@@ -37,5 +37,10 @@ public class ShopItemService {
         ShopItem shopItem = shopItemRepository.findById(id).orElseThrow(() -> new ServiceException("delete", "shopItem.not.exists"));
         shopItemRepository.delete(shopItem);
         return shopItem;
+    }
+
+    public void checkShopItemExistence(long id) {
+        shopItemRepository.findById(id).orElseThrow(() -> new ServiceException("update", "shopitem.not.exist"));
+
     }
 }

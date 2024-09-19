@@ -15,5 +15,5 @@ public interface ShopItemRepository extends JpaRepository<ShopItem, Long> {
     boolean existsByName(String name);
 
     @Query("SELECT CASE WHEN COUNT(s) > 0 THEN TRUE ELSE FALSE END FROM ShopItem s WHERE s.name = :name AND s.id <> :id")
-    boolean existsByNameAndExcludeId(@Param("username") String username, @Param("id") Long id);
+    boolean existsByNameAndExcludeId(@Param("name") String name, @Param("id") Long id);
 }
