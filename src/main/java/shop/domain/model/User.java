@@ -13,14 +13,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotBlank
+    @NotBlank(message = "username.missing")
     private String username;
 
     @Email
-    @NotBlank
+    @NotBlank(message = "email.missing")
     private String email;
 
-    @NotBlank
+    @NotBlank(message = "password.missing")
     private String password;
 
 //    @OneToMany(cascade=CascadeType.ALL, mappedBy = "user")
